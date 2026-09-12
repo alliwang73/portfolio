@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your mechanical engineering projects with a responsive portfolio website designed to attract potential employers and clients.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
