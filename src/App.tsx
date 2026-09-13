@@ -438,20 +438,21 @@ export default function App() {
                 >
                   View Projects
                 </button>
-                <a
-                  href="mailto:alwsanjose@gmail.com"
-                  className="font-mono text-sm uppercase tracking-widest px-6 py-3 transition-colors"
-                  style={{
-                    background: "transparent",
-                    color: "var(--foreground)",
-                    border: "1px solid var(--border)",
-                    textDecoration: "none",
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--primary)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
-                >
-                  Get In Touch
-                </a>
+               <a
+                href="https://raw.githubusercontent.com/username/repository/main/path/to/Allison_Wang_Resume.pdf"
+                className="font-mono text-sm uppercase tracking-widest px-6 py-3 transition-colors"
+                style={{
+                  background: "transparent",
+                  color: "var(--foreground)",
+                  border: "1px solid var(--border)",
+                  textDecoration: "none",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--primary)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
+              >
+                Resume
+              </a>
+
               </div>
 
               <div className="grid grid-cols-3 gap-4 mt-12 pt-8" style={{ borderTop: "1px solid var(--border)" }}>
