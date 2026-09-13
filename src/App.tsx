@@ -19,7 +19,7 @@ const PROJECTS = [
     id: "02",
     title: "Wind Turbine",
     category: "Energy",
-    org: "ME Capstone Project",
+    org: "3D Design Project",
     tags: ["SolidWorks FEA", "Topology Opt.", "GD&T"],
     description:
       "Radially symmetric wind tower designed to resist aerodynamic forces from all directions. Low angle of attack, 3-blade airfoil design for stable lift. Von Mises FEA stress analysis and topology optimization yielded a structure optimized for minimal deflection. Achieved 12.8% efficiency vs. 15.6 W available wind power.",
@@ -31,7 +31,7 @@ const PROJECTS = [
     id: "03",
     title: "Automatic Dog Pill Dispenser",
     category: "Mechatronics",
-    org: "3D Design Project",
+    org: "Product Design Project",
     tags: ["Onshape", "Arduino", "C++"],
     description:
       "Automated pill dispenser that evenly coats flavor around a dog pill to aid medication compliance. Prototype automatically coats 1.37 mL average dog pill using a lead screw, motor, and syringe. Included hand calculations for fluid flow, power transmission, and electrical component specification.",
