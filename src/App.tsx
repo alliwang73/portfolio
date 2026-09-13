@@ -439,7 +439,7 @@ export default function App() {
                   View Projects
                 </button>
                <a
-                href="https://raw.githubusercontent.com/alliwang73/portfolio/blob/main/src/imports/Allison_Wang_Resume.pdf"
+                href="https://raw.githubusercontent.com/alliwang73/portfolio/main/src/imports/Allison_Wang_Resume.pdf"
                 className="font-mono text-sm uppercase tracking-widest px-6 py-3 transition-colors"
                 style={{
                   background: "transparent",
