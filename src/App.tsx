@@ -31,7 +31,7 @@ const PROJECTS = [
     id: "03",
     title: "Automatic Dog Pill Dispenser",
     category: "Mechatronics",
-    org: "ME Design Project",
+    org: "3D Design Project",
     tags: ["Onshape", "Arduino", "C++"],
     description:
       "Automated pill dispenser that evenly coats flavor around a dog pill to aid medication compliance. Prototype automatically coats 1.37 mL average dog pill using a lead screw, motor, and syringe. Included hand calculations for fluid flow, power transmission, and electrical component specification.",
