@@ -329,7 +329,7 @@ export default function App() {
                 textDecoration: "none",
               }}
             >
-              Hire Me
+              About Me
             </a>
           </div>
 
