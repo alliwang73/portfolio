@@ -390,18 +390,13 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <div
-              className="w-8 h-8 flex items-center justify-center font-mono text-xs font-medium"
-              style={{ border: "1px solid var(--primary)", color: "var(--primary)" }}
-            >
-              AW
-            </div>
+            
             <div>
               <div className="font-display text-base font-semibold tracking-widest uppercase">
                 Allison Wang
               </div>
               <div className="font-mono text-xs" style={{ color: "var(--muted-foreground)" }}>
-                Mechanical Engineer · UC Berkeley
+                Mechanical Engineer, UC Berkeley
               </div>
             </div>
           </div>
@@ -424,7 +419,7 @@ export default function App() {
               </button>
             ))}
             <a
-              href="mailto:alwsanjose@gmail.com"
+              href="mailto:alwsanjose(@)gmail.com"
               className="site-button font-mono text-xs uppercase tracking-widest"
               style={{
                 background: "var(--primary)",
@@ -564,18 +559,6 @@ export default function App() {
 
               </div>
 
-              <div className="grid grid-cols-3 gap-4 mt-12 pt-8" style={{ borderTop: "1px solid var(--border)" }}>
-                {[
-                  { value: "4", label: "Projects" },
-                  { value: "3.8", label: "GPA" },
-                  { value: "3×", label: "Internships" },
-                ].map((s) => (
-                  <div key={s.label}>
-                    <div className="font-display text-2xl font-bold" style={{ color: "var(--primary)" }}>{s.value}</div>
-                    <div className="font-mono text-xs mt-1" style={{ color: "var(--muted-foreground)" }}>{s.label}</div>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Hero image */}
