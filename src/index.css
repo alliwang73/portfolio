@@ -722,7 +722,7 @@ section > .max-w-7xl {
 }
 
 #experience .lg\:col-span-2 {
-  padding: 1.75rem !important;
+  padding: 24px !important;
 }
 
 #experience .lg\:col-span-2 h3 {
@@ -738,7 +738,8 @@ section > .max-w-7xl {
 }
 
 #projects .project-card > div:last-child {
-  padding: 20px 0 0;
+  padding: 24px !important;
+  gap: 16px;
 }
 
 #home h1 {
@@ -761,7 +762,7 @@ section > .max-w-7xl {
 }
 
 #projects .project-card > div:last-child {
-  padding: 20px 0 0;
+  padding: 24px !important;
 }
 
 #projects .project-card h3 {
@@ -771,6 +772,32 @@ section > .max-w-7xl {
 
 #projects .project-card p {
   max-width: 42rem;
+  line-height: 1.7;
+}
+
+#projects .project-card .flex.flex-wrap.gap-2 {
+  gap: 8px;
+  margin-top: 4px;
+}
+
+#projects .project-card .flex.flex-wrap.gap-2 span {
+  line-height: 1.5;
+  white-space: normal;
+}
+
+#skills .p-5 {
+  padding: 28px !important;
+}
+
+#skills .p-5 > div:not(:first-child) {
+  align-items: flex-start;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+#skills .p-5 > div:not(:first-child) > div:last-child {
+  min-width: 0;
+  line-height: 1.6;
 }
 
 #experience .lg\:col-span-2,
@@ -812,6 +839,14 @@ section > .max-w-7xl {
     padding: 22px !important;
   }
 
+  #projects .project-card > div:last-child {
+    padding: 22px !important;
+  }
+
+  #skills .p-5 {
+    padding: 22px !important;
+  }
+
   #home h1 {
     max-width: 8ch;
   }
@@ -825,7 +860,7 @@ section > .max-w-7xl {
   }
 
   #projects .project-card > div:last-child {
-    padding-top: 20px;
+    padding: 22px !important;
   }
 
   .site-button {
