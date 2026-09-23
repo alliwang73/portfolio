@@ -108,6 +108,16 @@ a {
   font-family: var(--font-heading);
 }
 
+.site-button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px !important;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 body {
   font-family: var(--font-body);
 }
@@ -611,6 +621,21 @@ body {
   overflow: hidden;
 }
 
+section > .max-w-7xl {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.full-section > .max-w-7xl {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+#home > .max-w-7xl {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
 /* Keep the desktop composition intact while giving narrow screens room to breathe. */
 @media (max-width: 767px) {
   .full-section {
@@ -623,19 +648,20 @@ body {
   }
 
   section > .max-w-7xl {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   #home > .max-w-7xl {
-    padding-top: 88px;
-    padding-bottom: 64px;
+    padding-top: 104px;
+    padding-bottom: 88px;
   }
 
-  .hero-intro {
-    min-height: 150px;
+  .site-button {
+    min-height: 50px;
+    padding: 15px 20px !important;
   }
 
   .hero-intro .intro-text {

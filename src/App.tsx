@@ -274,7 +274,6 @@ export default function App() {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
-  const [heroIntro, setHeroIntro] = useState(true);
 
   const carouselOpen = carouselIndex !== null;
 
@@ -302,11 +301,6 @@ export default function App() {
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const t = setTimeout(() => setHeroIntro(false), 2800);
-    return () => clearTimeout(t);
   }, []);
 
   useEffect(() => {
@@ -378,7 +372,7 @@ export default function App() {
             ))}
             <a
               href="mailto:alwsanjose@gmail.com"
-              className="font-mono text-xs uppercase tracking-widest px-4 py-2"
+              className="site-button font-mono text-xs uppercase tracking-widest"
               style={{
                 background: "var(--primary)",
                 color: "var(--primary-foreground)",
@@ -469,37 +463,25 @@ export default function App() {
                 </span>
               </div>
 
-              {heroIntro ? (
-                <div className="hero-intro">
-                  <div className="intro-text">
-                    <span className="word">Hi, </span>
-                    <span className="word">I'm </span>
-                    <span className="word">Allison </span>
-                    <span className="word">Wang</span>
-                  </div>
-                  <div className="intro-wave">👋</div>
-                </div>
-              ) : (
-                <div className="hero-content-reveal">
-                  <h1 className="font-display font-black leading-none mb-3" style={{ fontSize: "clamp(3rem, 8vw, 5.5rem)" }}>
-                    <span className="block" style={{ color: "var(--foreground)" }}>ALLISON</span>
-                    <span className="block" style={{ color: "var(--primary)" }}>WANG</span>
-                  </h1>
+              <div>
+                <h1 className="font-display font-black leading-none mb-3" style={{ fontSize: "clamp(3rem, 8vw, 5.5rem)" }}>
+                  <span className="block" style={{ color: "var(--foreground)" }}>ALLISON</span>
+                  <span className="block" style={{ color: "var(--primary)" }}>WANG</span>
+                </h1>
 
-                  <div className="font-mono text-sm mb-6" style={{ color: "var(--muted-foreground)" }}>
-                    B.S. Mechanical Engineering · UC Berkeley · GPA 3.8 · May 2027
-                  </div>
-
-                  <p className="text-base leading-relaxed max-w-md mb-8" style={{ color: "var(--muted-foreground)" }}>
-                    I'm a motivated engineer looking to use my <strong style={{ color: "var(--foreground)" }}>mechanical design</strong>, <strong style={{ color: "var(--foreground)" }}>testing</strong>, and <strong style={{ color: "var(--foreground)" }}>coding</strong> skills to tackle tough, impactful problems.
-                  </p>
+                <div className="font-mono text-sm mb-6" style={{ color: "var(--muted-foreground)" }}>
+                  B.S. Mechanical Engineering · UC Berkeley · GPA 3.8 · May 2027
                 </div>
-              )}
+
+                <p className="text-base leading-relaxed max-w-md mb-8" style={{ color: "var(--muted-foreground)" }}>
+                  I'm a motivated engineer looking to use my <strong style={{ color: "var(--foreground)" }}>mechanical design</strong>, <strong style={{ color: "var(--foreground)" }}>testing</strong>, and <strong style={{ color: "var(--foreground)" }}>coding</strong> skills to tackle tough, impactful problems.
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollTo("Projects")}
-                  className="font-mono text-sm uppercase tracking-widest px-6 py-3"
+                  className="site-button font-mono text-sm uppercase tracking-widest"
                   style={{
                     background: "var(--primary)",
                     color: "var(--primary-foreground)",
@@ -513,7 +495,7 @@ export default function App() {
                 </button>
                <a
                 href="/AllisonWang_CV.pdf"
-                className="font-mono text-sm uppercase tracking-widest px-6 py-3 transition-colors"
+                className="site-button font-mono text-sm uppercase tracking-widest transition-colors"
                 style={{
                   background: "transparent",
                   color: "var(--foreground)",
@@ -895,7 +877,7 @@ export default function App() {
                   </div>
                   <button
                     type="submit"
-                    className="font-mono text-sm uppercase tracking-widest px-6 py-3 hover:opacity-90 transition-opacity"
+                    className="site-button font-mono text-sm uppercase tracking-widest hover:opacity-90 transition-opacity"
                     style={{
                       background: "var(--primary)",
                       color: "var(--primary-foreground)",
