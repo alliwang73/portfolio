@@ -386,6 +386,42 @@ body {
   padding: 24px 60px;
 }
 
+.project-journal {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.project-journal-label {
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-journal-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 36px;
+}
+
+.project-journal-section h4 {
+  margin-bottom: 8px;
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.project-journal-section p {
+  max-width: 42rem;
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .carousel-dots {
   display: flex;
   gap: 8px;
@@ -433,6 +469,14 @@ body {
   }
   .carousel-image-wrap { height: 180px; }
   .carousel-content { padding: 18px 46px; }
+  .project-journal {
+    margin-top: 24px;
+    padding-top: 22px;
+  }
+  .project-journal-sections {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 }
 
 /* ===== Hero Intro Animation (in-place) ===== */
