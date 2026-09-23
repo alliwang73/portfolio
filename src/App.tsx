@@ -18,6 +18,14 @@ const PROJECTS = [
       { heading: "Diffusion system", text: "A semi-permeable 100 μm PDMS membrane allows CO₂ to diffuse from the fluid. An SLA-printed mesh bracket supports the membrane and provides area for gas diffusion, secured with M2 and M3 screws and inserts." },
       { heading: "Integration and testing", text: "The payload slots into the bulkhead with vertical locating pins and a removable annulus. Fluid testing used a pipe, peristaltic pump, and power supply, with measured behavior compared against theoretical power and fluid-flow calculations." },
     ],
+    journalImages: [
+      { src: "/project-pages/page-03.png", caption: "Project overview" },
+      { src: "/project-pages/page-05.png", caption: "Airframe integration" },
+      { src: "/project-pages/page-06.png", caption: "Peristaltic pump and diffusion system" },
+      { src: "/project-pages/page-07.png", caption: "PDMS gas exchanger" },
+      { src: "/project-pages/page-08.png", caption: "Reaction chamber" },
+      { src: "/project-pages/page-09.png", caption: "Fluid testing procedure" },
+    ],
     image: "/yeast-payload.png",
     year: "2024–2026",
   },
@@ -35,6 +43,12 @@ const PROJECTS = [
       { heading: "Analysis", text: "A low-angle-of-attack, three-blade airfoil creates stable lift. Von Mises FEA stress analysis and topology optimization produced an optimized structure designed for minimal deflection." },
       { heading: "Deflection test", text: "A rubber stopper, digital indicator, and pulley were used to create a repeatable deflection test. Results were compared with the theoretical FEA simulation to validate structural integrity." },
       { heading: "Power test", text: "A digital tachometer, reflective tape, and wind machine measured actual performance. With 15.6 W of available wind power and 2 W measured output, the turbine achieved 12.8% efficiency." },
+    ],
+    journalImages: [
+      { src: "/project-pages/page-10.png", caption: "Project overview" },
+      { src: "/project-pages/page-12.png", caption: "Engineering drawing, FEA, and topology optimization" },
+      { src: "/project-pages/page-13.png", caption: "Deflection test procedure" },
+      { src: "/project-pages/page-14.png", caption: "Power testing procedure" },
     ],
     image: "/wind-turbine.png",
     year: "2024",
@@ -54,6 +68,11 @@ const PROJECTS = [
       { heading: "Prototype engineering", text: "The prototype coats an average 1.37 mL dog pill using a lead screw, motor, and syringe. Design decisions balanced software, hardware, and customer requirements." },
       { heading: "Technical work", text: "The project included hand calculations for fluid flow, power transmission, and electrical components, along with hardware specification and routing." },
     ],
+    journalImages: [
+      { src: "/project-pages/page-15.png", caption: "Project overview" },
+      { src: "/project-pages/page-16.png", caption: "User problem and solution" },
+      { src: "/project-pages/page-17.png", caption: "Prototype and engineering work" },
+    ],
     image: "/dog-pill-dispenser.png",
     year: "2024",
   },
@@ -71,6 +90,16 @@ const PROJECTS = [
       { heading: "Sensing and feedback", text: "A gyroscope and accelerometer mount to the drumstick in a 3D-printed enclosure. A force-sensitive resistor tracks impact force, while an ultrasonic sensor measures distance from the drum edge to guide center strikes." },
       { heading: "Three-controller architecture", text: "ESP #1 drives the actuator hub, brush motor, speaker, and dual motor encoder. ESP #2 handles the ultrasonic sensor and red/green center-strike LED. ESP #3 reads the force-sensitive sensor and IMU, including timing between impacts." },
       { heading: "Control behavior", text: "The brush motor was calibrated to move the demonstrating drumstick to a new angle every five seconds. ESP-NOW data plots force and grip angle; a discrepancy above 5 N triggers a recommendation with the measured averages." },
+    ],
+    journalImages: [
+      { src: "/project-pages/page-18.png", caption: "Project overview" },
+      { src: "/project-pages/page-20.png", caption: "Drumstick sensing system" },
+      { src: "/project-pages/page-21.png", caption: "ESP #1 actuator hub" },
+      { src: "/project-pages/page-22.png", caption: "Brush motor test" },
+      { src: "/project-pages/page-23.png", caption: "Brush motor housing" },
+      { src: "/project-pages/page-24.png", caption: "Speaker test" },
+      { src: "/project-pages/page-25.png", caption: "ESP #2 ultrasonic sensor and LED" },
+      { src: "/project-pages/page-26.png", caption: "ESP #3 force sensor and IMU" },
     ],
     image: "/drumstick-tutor.png",
     year: "2025",
@@ -218,8 +247,8 @@ function ProjectCard({ project, onClick }: { project: typeof PROJECTS[0]; onClic
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover soft-overlay"
-          style={{ opacity: 0.7, filter: "saturate(1.15) brightness(1.05)" }}
+          className="w-full h-full object-contain soft-overlay"
+          style={{ opacity: 0.88, filter: "saturate(1.05) brightness(1.02)" }}
         />
         <div
           className="absolute inset-0"
@@ -966,37 +995,13 @@ export default function App() {
             <button className="carousel-arrow carousel-arrow-left" onClick={prevProject} aria-label="Previous">←</button>
 
             <article className="carousel-slide">
-              <div className="carousel-image-wrap">
-                <img
-                  src={PROJECTS[carouselIndex].image}
-                  alt={PROJECTS[carouselIndex].title}
-                  className="carousel-image"
-                  style={{ opacity: 0.8, filter: "saturate(1.15) brightness(1.05)" }}
-                />
-                <div className="absolute top-3 left-3">
-                  <span
-                    className="font-mono text-xs px-2 py-1"
-                    style={{
-                      background: "rgba(91,158,107,0.15)",
-                      color: "var(--primary)",
-                      border: "1px solid rgba(91,158,107,0.3)",
-                    }}
-                  >
-                    {PROJECTS[carouselIndex].category}
-                  </span>
-                </div>
-                <div className="absolute top-3 right-3 font-mono text-xs" style={{ color: "var(--muted-foreground)" }}>
-                  {PROJECTS[carouselIndex].year}
-                </div>
-              </div>
-
               <div className="carousel-content">
                 <div className="flex items-center gap-3 mb-2">
                   <span className="font-mono text-2xl font-medium" style={{ color: "rgba(91,158,107,0.3)" }}>
                     {PROJECTS[carouselIndex].id}
                   </span>
                   <span className="font-mono text-xs" style={{ color: "var(--muted-foreground)" }}>
-                    {PROJECTS[carouselIndex].org}
+                    {PROJECTS[carouselIndex].org} · {PROJECTS[carouselIndex].year}
                   </span>
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-3" style={{ color: "var(--foreground)" }}>
@@ -1039,6 +1044,14 @@ export default function App() {
                         <h4>{detail.heading}</h4>
                         <p>{detail.text}</p>
                       </section>
+                    ))}
+                  </div>
+                  <div className="project-journal-gallery">
+                    {PROJECTS[carouselIndex].journalImages.map((image) => (
+                      <figure key={image.src} className="project-journal-figure">
+                        <img src={image.src} alt={`${PROJECTS[carouselIndex].title}: ${image.caption}`} />
+                        <figcaption>{image.caption}</figcaption>
+                      </figure>
                     ))}
                   </div>
                 </div>

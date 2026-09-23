@@ -403,8 +403,8 @@ body {
 
 .project-journal-sections {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px 36px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
 }
 
 .project-journal-section h4 {
@@ -420,6 +420,35 @@ body {
   color: var(--muted-foreground);
   font-size: 14px;
   line-height: 1.7;
+}
+
+.project-journal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.project-journal-figure {
+  margin: 0;
+}
+
+.project-journal-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  background: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.project-journal-figure figcaption {
+  margin-top: 9px;
+  color: var(--muted-foreground);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
 }
 
 .carousel-dots {
@@ -474,8 +503,11 @@ body {
     padding-top: 22px;
   }
   .project-journal-sections {
-    grid-template-columns: 1fr;
     gap: 22px;
+  }
+  .project-journal-gallery {
+    gap: 22px;
+    margin-top: 28px;
   }
 }
 
