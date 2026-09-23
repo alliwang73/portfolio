@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Fredoka", "Nunito", system-ui, sans-serif;
-  --font-body: "Nunito", system-ui, sans-serif;
-  --font-mono: "Quicksand", ui-sans-serif, sans-serif;
-  --font-heading: "Playfair Display", Georgia, serif;
+  --font-display: "DM Sans", ui-sans-serif, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-heading: "Fraunces", Georgia, serif;
 }
 
 /* ===== Studio Ghibli Design Tokens ===== */
@@ -27,9 +27,9 @@
   --cloud: #ffffff;
 
   /* Fonts */
-  --font-display: "Fredoka", "Nunito", system-ui, sans-serif;
-  --font-body: "Nunito", system-ui, sans-serif;
-  --font-mono: "Quicksand", ui-sans-serif, sans-serif;
+  --font-display: "DM Sans", ui-sans-serif, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 /* ===== Base ===== */
@@ -45,6 +45,7 @@ html {
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -54,6 +55,7 @@ body {
   font-size: 16px;
   color: var(--foreground);
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -280,6 +282,7 @@ body {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(74, 63, 53, 0.2);
   animation: carousel-pop-in 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin: 16px;
 }
 
 @keyframes carousel-pop-in {
@@ -400,13 +403,21 @@ body {
 }
 
 @media (max-width: 640px) {
+  .carousel-modal {
+    width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px);
+    margin: 12px;
+    border-radius: 14px;
+  }
+
+  .carousel-slide { max-height: calc(100dvh - 100px); }
   .carousel-arrow {
     width: 34px;
     height: 34px;
     font-size: 14px;
   }
-  .carousel-image-wrap { height: 200px; }
-  .carousel-content { padding: 16px 50px; }
+  .carousel-image-wrap { height: 180px; }
+  .carousel-content { padding: 18px 46px; }
 }
 
 /* ===== Hero Intro Animation (in-place) ===== */
@@ -598,6 +609,72 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+}
+
+/* Keep the desktop composition intact while giving narrow screens room to breathe. */
+@media (max-width: 767px) {
+  .full-section {
+    min-height: auto;
+  }
+
+  nav .max-w-7xl {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  section > .max-w-7xl {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  #home > .max-w-7xl {
+    padding-top: 88px;
+    padding-bottom: 64px;
+  }
+
+  .hero-intro {
+    min-height: 150px;
+  }
+
+  .hero-intro .intro-text {
+    font-size: clamp(2.25rem, 12vw, 3.5rem);
+  }
+
+  .hero-content-reveal h1 {
+    font-size: clamp(2.8rem, 16vw, 4.5rem) !important;
+  }
+
+  section h2 {
+    font-size: clamp(2rem, 12vw, 3rem) !important;
+  }
+
+  .group > .flex.items-center.justify-between {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .group .flex.items-center.gap-3 {
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  .group .text-sm {
+    overflow-wrap: anywhere;
+  }
+
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  footer .max-w-7xl {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
 }
 
 /* ===== Scrollbar ===== */
