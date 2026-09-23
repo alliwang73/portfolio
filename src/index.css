@@ -804,7 +804,68 @@ section > .max-w-7xl {
 #skills .p-5,
 #contact form,
 #contact .flex.flex-col.items-center {
-  border-radius: 0 !important;
+  border-radius: 12px !important;
+}
+
+/* Framer-inspired polish: quiet surfaces, precise controls, and softer motion. */
+nav {
+  box-shadow: 0 8px 28px rgba(74, 63, 53, 0.06);
+}
+
+.site-button {
+  border-radius: 8px !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.site-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(91, 158, 107, 0.18);
+}
+
+.project-card {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(74, 63, 53, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(74, 63, 53, 0.11);
+}
+
+.project-card > div:first-child {
+  background: var(--muted) !important;
+}
+
+.project-card > div:first-child::after {
+  display: none;
+}
+
+#experience .flex.flex-col.gap-1 button {
+  border-radius: 8px !important;
+  padding: 14px 16px !important;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+#experience .flex.flex-col.gap-1 button:hover {
+  transform: translateX(3px);
+  border-color: var(--border) !important;
+  background: rgba(255, 251, 240, 0.7) !important;
+}
+
+#contact input,
+#contact textarea {
+  border-radius: 8px !important;
+  line-height: 1.5;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  box-shadow: 0 0 0 3px rgba(91, 158, 107, 0.12);
+}
+
+#skills .p-5 > div:not(:first-child):last-child {
+  border-bottom: 0 !important;
 }
 
 /* Keep the desktop composition intact while giving narrow screens room to breathe. */
@@ -896,8 +957,8 @@ section > .max-w-7xl {
   }
 
   .project-card:hover {
-    transform: none;
-    box-shadow: none;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(74, 63, 53, 0.08);
   }
 
   footer .max-w-7xl {
